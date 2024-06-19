@@ -1,0 +1,26 @@
+ body {
+            padding-top: 56px;
+        }
+        aside {
+            background-color: #f8f9fa;
+            padding: 20px;
+            height: 100vh;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin: 10px 0;
+        }
+        aside ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        aside ul li a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            margin-left: 200px;
+            padding: 20px;
+        }
