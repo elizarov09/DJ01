@@ -8,17 +8,7 @@
     <h1 class="mt-4">Новости</h1>
     <p>Здесь вы найдете последние новости о разработке веб-приложений на Django и других интересных темах.</p>
     <div class="row">
-        <aside class="col-md-3">
-            <ul class="list-group">
-                {% for news in news_list %}
-                    <li class="list-group-item">
-                        <h5>{{ news.title }}</h5>
-                        <p>{{ news.pub_date|date:"d M Y H:i" }}</p>
-                        <p><strong>Автор: </strong>{{ news.author.username }}</p>
-                    </li>
-                {% endfor %}
-            </ul>
-        </aside>
+
         <main class="col-md-9">
             {% for news in news_list %}
                 <div class="news-item">
