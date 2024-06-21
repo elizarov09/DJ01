@@ -1,9 +1,6 @@
-# main/views.py
 from django.shortcuts import render
 from django.http import HttpResponse
-from news.models import News  # Импорт модели News из модуля news
-
-# Ваши функции представления
+from .models import News
 def index(request):
     return render(request, 'main/index.html')
 
@@ -25,6 +22,12 @@ def contacts(request):
 def about(request):
     return render(request, 'main/about.html')
 
+#def news(request):
+    #news = News.objects.all()
+    #return render(request, 'news/news.html', {'news': news})  # Указываем правильный путь к шаблону
+
+
 def news(request):
-    news = News.objects.all()
-    return render(request, 'news/news.html', {'news': news})
+    news_list = News.objects.all().order_by('-pub_date')
+    context = {'news_list': news_list}
+    return render(request, 'news/news.html', context)
